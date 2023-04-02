@@ -10,6 +10,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.e_commerce.MainActivity;
 import com.example.e_commerce.R;
 import com.example.e_commerce.model.Category;
 
@@ -38,6 +39,13 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.Catego
     public void onBindViewHolder(@NonNull CategoryViewHolder holder, int position) //что конкретно в кажое поле мы будем подставлять
     {
         holder.categoryTitle.setText(categories.get(position).getTitle()); //holder - это передаваемый параметр
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {  //обработчик нажатия на категорию
+            @Override
+            public void onClick(View view) {
+                MainActivity.showCoursesByCategory(categories.get(position).getId());
+            }
+        });
     }
 
     @Override
