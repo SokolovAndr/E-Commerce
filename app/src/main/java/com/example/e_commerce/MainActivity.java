@@ -34,11 +34,11 @@ public class MainActivity extends AppCompatActivity {
         setCategoryRecycler(categoryList);
 
         List<Course> courseList = new ArrayList<>();
-        courseList.add(new Course(1, "course1", "Профессия Java\nразработчик", "1 января","начальный", "#424345"));
-        courseList.add(new Course(2, "python", "Профессия Python\nразработчик","10 января","средний", "#9FA52D"));
-        courseList.add(new Course(3, "travel_car", "Мой\nтекст","15 февраля","продвинутый", "#9FA52D"));
-        courseList.add(new Course(4, "travel_car", "Мой\nтекст2","20 марта","мастер", "#9FA52D"));
-        courseList.add(new Course(5, "travel_car", "Мой\nтекст2","25 апреля","бог", "#9FA52D"));
+        courseList.add(new Course(1, "course1", "Профессия Java\nразработчик", "1 января","начальный", "#424345", "Test"));
+        courseList.add(new Course(2, "python", "Профессия Python\nразработчик","10 января","средний", "#9FA52D", "Test"));
+        courseList.add(new Course(3, "travel_car", "Мой\nтекст","15 февраля","продвинутый", "#424345", "Test"));
+        courseList.add(new Course(4, "travel_car", "Мой\nтекст2","20 марта","мастер", "#424345", "Test"));
+        courseList.add(new Course(5, "travel_car", "Мой\nтекст3","25 апреля","бог", "#424345", "Test"));
 
         setCourseRecycler(courseList);
     }
